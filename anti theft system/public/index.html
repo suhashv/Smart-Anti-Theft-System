@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Anti-Theft System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCr1PiLnF_k0ltqi1yPgOnHAumg7IXStb0",
+      authDomain: "smart-anti-theft-system-a10c8.firebaseapp.com",
+      projectId: "smart-anti-theft-system-a10c8",
+      storageBucket: "smart-anti-theft-system-a10c8.appspot.com",
+      messagingSenderId: "1000050642830",
+      appId: "1:1000050642830:web:0657e493eaa0c41679dedf",
+      measurementId: "G-WZBEK6SCZV"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Smart Anti-Theft System</h1>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#alerts">Alerts</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+        </nav>
+        <button class="mode-toggle" onclick="toggleMode()">Dark Mode</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h2>Protect What Matters Most</h2>
+        <p>Your security is our priority. Stay informed and in control.</p>
+        <button onclick="scrollToSection('dashboard')">Get Started</button>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard">
+        <div id="status">
+            <h3>System Status</h3>
+            <div>
+                <span id="status-indicator"></span>
+                <span id="system-status">Active and Secure</span>
+            </div>
+        </div>
+        <div id="chart-container">
+            <h3>Activity Overview</h3>
+            <canvas id="activityChart"></canvas>
+        </div>
+    </section>
+
+    <!-- Alerts -->
+    <section id="alerts">
+        <h2>Recent Alerts</h2>
+        <div id="alert-list">
+            <div class="alert-item">
+                <span>Front Door Breach</span>
+                <span class="alert-time">2 mins ago</span>
+                <span class="alert-status">Unresolved</span>
+            </div>
+            <div class="alert-item">
+                <span>Motion Detected in Garage</span>
+                <span class="alert-time">15 mins ago</span>
+                <span class="alert-status">Resolved</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Settings -->
+    <section id="settings">
+        <h2>System Settings</h2>
+        <form id="settings-form">
+            <label for="alert-toggle">Enable Alerts:</label>
+            <input type="checkbox" id="alert-toggle" checked>
+
+            <label for="time-set">Alert Timeframe:</label>
+            <input type="time" id="time-set" value="23:59">
+
+            <button type="submit">Save Settings</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Smart Anti-Theft System. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
