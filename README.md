@@ -84,9 +84,4 @@ This project is hosted on Firebase. To view the live demo, visit [Smart Anti-The
 - **Advanced Analytics** 📊: More detailed analytics to track system performance.
 - **Multiple User Support** 👥: Enable multiple users to access and manage the system simultaneously.
 
-## **License** 📜
-This project is licensed under the MIT License.
 
----
-
-👨‍💻 Happy Coding! If you have any questions or need further customization, feel free to reach out.
